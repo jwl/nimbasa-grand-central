@@ -1,0 +1,17 @@
+{
+  "Bulbasaur": ["Tackle", "Growl", "Vine Whip"],
+  "Charmander": ["Scratch", "Growl", "Ember"],
+  "Squirtle": ["Tackle", "Tail Whip", "Bubble"],
+  "Pikachu": ["Thunder Shock", "Growl", "Tail Whip"],
+  "Pidgey": ["Tackle", "Sand Attack", "Gust"],
+  "Gastly": ["Hypnosis", "Lick"],
+  "Ekans": ["Poison Sting","Leer","Acid"],
+  "Sandshrew": ["Scratch","Poison Sting", "Sand Attack"],
+  "Nidoran(F)": ["Growl","Scratch","Tail Whip","Poison Sting"],
+  "Nidoran(M)": ["Leer","Peck","Poison Sting"],
+  "Growlithe": ["Ember","Leer","Fire Fang"],
+  "Caterpie": ["Tackle","String Shot"],
+  "Weedle": ["Poison Sting", "String Shot"],
+  "Clefairy": ["Growl","Pound","Sing"],
+  "Diglett": ["Scratch","Sand Attack","Growl"]
+}

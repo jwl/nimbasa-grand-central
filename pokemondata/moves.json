@@ -1,0 +1,223 @@
+{
+  "Tackle":
+  {
+    "description": "A physical attack in which the user charges and slams into the target with its whole body.",
+    "moveMechanics": ["damage"],
+    "moveCategory": "Physical",
+    "moveType": "Normal",
+    "pp": 35,
+    "accuracy": 100,
+    "power": 40
+  },
+  "Growl":
+  {
+    "description": "The user growls in an endearing way, making opposing Pokémon less wary. This lowers their Attack stat.",
+    "moveMechanics": ["stat"],
+    "moveType": "Normal",
+    "pp": 40,
+    "accuracy": 100,
+    "statsChanged": ["attack"],
+    "statsCProbability": 100,
+    "delta": -1
+  },
+  "Scratch":
+  {
+    "description": "Hard, pointed, sharp claws rake the target to inflict damage.",
+    "moveMechanics": ["damage"],
+    "moveCategory": "Physical",
+    "moveType": "Normal",
+    "pp": 35,
+    "accuracy": 100,
+    "power": 40
+  },
+  "Tail Whip":
+  {
+    "description": "The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stat.",
+    "moveMechanics": ["stat"],
+    "moveType": "Normal",
+    "pp": 30,
+    "accuracy": 100,
+    "statsChanged": ["defense"],
+    "statsCProbability": 100,
+    "delta": -1
+  },
+  "Vine Whip":
+  {
+    "description": "The target is struck with slender, whiplike vines to inflict damage.",
+    "moveMechanics": ["damage"],
+    "moveCategory": "Physical",
+    "moveType": "Grass",
+    "pp": 25,
+    "accuracy": 100,
+    "power": 45
+  },
+  "Ember":
+  {
+    "description": "The target is attacked with small flames. This may also leave the target with a burn.",
+    "moveMechanics": ["damage","status"],
+    "moveCategory": "Special",
+    "moveType": "Fire",
+    "pp": 25,
+    "accuracy": 100,
+    "power": 40,
+    "status": "Burn",
+    "statusEProbability": 10
+  },
+  "Bubble":
+  {
+    "description": "A spray of countless bubbles is jetted at the opposing Pokémon. This may also lower their Speed stat.",
+    "moveMechanics": ["damage","stat"],
+    "moveCategory": "Special",
+    "moveType": "Water",
+    "pp": 30,
+    "accuracy": 100,
+    "power": 40,
+    "statsChanged": ["speed"],
+    "statsCProbability": 33,
+    "delta": -1
+  },
+  "Thunder Shock":
+  {
+    "description": "A jolt of electricity crashes down on the target to inflict damage. This may also leave the target with paralysis.",
+    "moveMechanics": ["damage","status"],
+    "moveCategory": "Special",
+    "moveType": "Electric",
+    "pp": 30,
+    "accuracy": 100,
+    "power": 40,
+    "status": "Paralyze",
+    "statusEProbability": 10
+  },
+  "Sand Attack":
+  {
+    "description": "Sand is hurled in the target's face, reducing the target's accuracy.",
+    "moveMechanics": ["stat"],
+    "moveType": "Ground",
+    "pp": 15,
+    "accuracy": 100,
+    "statsChanged": ["accuracy"],
+    "statsCProbability": 100,
+    "delta": -1
+  },
+  "Gust":
+  {
+    "description": "A gust of wind is whipped up by wings and launched at the target to inflict damage.",
+    "moveMechanics": ["damage"],
+    "moveCategory": "Special",
+    "moveType": "Flying",
+    "pp": 35,
+    "accuracy": 100,
+    "power": 40
+  },
+  "Hypnosis":
+  {
+    "description": "The user employs hypnotic suggestion to make the target fall into a deep sleep.",
+    "moveMechanics": ["status"],
+    "moveType": "Psychic",
+    "pp": 20,
+    "accuracy": 60,
+    "status": "Sleep",
+    "statusEProbability": 100
+  },
+  "Lick":
+  {
+    "description": "The target is licked with a long tongue, causing damage. This may also leave the target with paralysis.",
+    "moveMechanics": ["damage","status"],
+    "moveCategory": "Physical",
+    "moveType": "Ghost",
+    "pp": 30,
+    "accuracy": 100,
+    "power": 30,
+    "status": "Paralyze",
+    "statusEProbability": 30
+  },
+  "Poison Sting":
+  {
+    "description": "The user stabs the target with a poisonous stinger. This may also poison the target.",
+    "moveMechanics": ["damage","status"],
+    "moveCategory": "Physical",
+    "moveType": "Poison",
+    "pp": 35,
+    "accuracy": 100,
+    "power": 15,
+    "status": "Poison",
+    "statusEProbability": 30
+  },
+  "Leer":
+  {
+    "description": "The user gives opposing Pokémon an intimidating leer that lowers the Defense stat.",
+    "moveMechanics": ["stat"],
+    "moveType": "Normal",
+    "pp": 30,
+    "accuracy": 100,
+    "statsChanged": ["defense"],
+    "statsCProbability": 100,
+    "delta": -1
+  },
+  "Acid":
+  {
+    "description": "The opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stat.",
+    "moveMechanics": ["damage","stat"],
+    "moveCategory": "Special",
+    "moveType": "Poison",
+    "pp": 30,
+    "accuracy": 100,
+    "power": 40,
+    "statsChanged": ["spDef"],
+    "statsCProbability": 10,
+    "delta": -1
+  },
+  "Peck":
+  {
+    "description": "The target is jabbed with a sharply pointed beak or horn.",
+    "moveMechanics": ["damage"],
+    "moveCategory": "Physical",
+    "moveType": "Flying",
+    "pp": 35,
+    "accuracy": 100,
+    "power": 35
+  },
+  "Fire Fang":
+  {
+    "description": "The user bites with flame-cloaked fangs. This may also make the target flinch or leave it with a burn.",
+    "moveMechanics": ["damage","status"],
+    "moveCategory": "Physical",
+    "moveType": "Fire",
+    "pp": 15,
+    "accuracy": 95,
+    "power": 65,
+    "status": "Burn",
+    "statusEProbability": 10
+  },
+  "String Shot":
+  {
+    "description": "The user gives opposing Pokémon an intimidating leer that lowers the Defense stat.",
+    "moveMechanics": ["stat"],
+    "moveType": "Bug",
+    "pp": 40,
+    "accuracy": 95,
+    "statsChanged": ["speed"],
+    "statsCProbability": 100,
+    "delta": -1
+  },
+  "Pound":
+  {
+    "description": "The target is physically pounded with a long tail, a foreleg, or the like.",
+    "moveMechanics": ["damage"],
+    "moveCategory": "Physical",
+    "moveType": "Normal",
+    "pp": 35,
+    "accuracy": 100,
+    "power": 40
+  },
+  "Sing":
+  {
+    "description": "A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.",
+    "moveMechanics": ["status"],
+    "moveType": "Normal",
+    "pp": 15,
+    "accuracy": 55,
+    "status": "Sleep",
+    "statusEProbability": 100
+  }
+}
