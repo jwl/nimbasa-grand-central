@@ -1,5 +1,7 @@
 package pokemon
 
+import "../internal/Dataparser"
+
 type Pokemon struct {
 	name    string
 	number  int
@@ -11,4 +13,8 @@ type Pokemon struct {
 	speed   int
 	type1   string
 	type2   string
+}
+
+func populatePokemon() []Pokemon {
+	GetObjectFromJSON("../pokemondata/stats.json")
 }
