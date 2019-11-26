@@ -3,9 +3,13 @@ package internal
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/jwl/nimbasa-grand-central/pokemon"
 	"io/ioutil"
 	"os"
+	"strconv"
 )
+
+// Extract Pokemon data from stats.json
 
 // Extract object from JSON
 func GetObjectFromJSON(jsonObject string) string {
@@ -19,23 +23,32 @@ func GetObjectFromJSON(jsonObject string) string {
 
 }
 
-func GetJSONFromFile(path string) string {
-	jsonFile, err := os.Open("stats.json")
+func GetPokemonFromFile(path string) string {
+	//jsonFile, err := os.Open("./pokemondata/stats.json")
+	jsonFile, err := os.Open(path)
 
 	if err != nil {
 		fmt.Println(err)
+		return ""
+	} else {
+		fmt.Println("Successfully opened stats.json")
 	}
-
-	fmt.Println("Successfully opened stats.json")
 
 	defer jsonFile.Close()
 
 	byteValue, _ := ioutil.ReadAll(jsonFile)
 
-	var result map[string]interface{}
-	json.Unmarshal([]byte(byteValue), &result)
+	var pokemonFromFile pokemon.PokemonArray
 
-	fmt.Println(result)
+	json.Unmarshal(byteValue, &pokemonFromFile)
+
+	fmt.Println("json unmarshaled, about to print contents of pokemonFromFile")
+	fmt.Println("len(pokemonFromFile.PokemonArray) is: " + strconv.Itoa(len(pokemonFromFile.PokemonArray)))
+
+	for i := 0; i < len(pokemonFromFile.PokemonArray); i++ {
+		fmt.Println("Pokemon Name: " + pokemonFromFile.PokemonArray[i].Name)
+		fmt.Println("Pokemon Number: " + strconv.Itoa(pokemonFromFile.PokemonArray[i].Number))
+	}
 
 	return ""
 }
