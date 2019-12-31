@@ -5,7 +5,6 @@ import (
   "fmt"
   "io/ioutil"
   "os"
-  "strconv"
 
   "github.com/jwl/nimbasa-grand-central/pokemon"
 )
@@ -13,24 +12,25 @@ import (
 // Extract Pokemon data from stats.json
 
 // GetObjectFromJSON extracts a data object from a json object
-func GetObjectFromJSON(jsonObject string) string {
-  testJSON := `{"testkey":"testvalue"}`
+//func GetObjectFromJSON(jsonObject string) string {
+  //testJSON := `{"testkey":"testvalue"}`
 
-  var parsedJSON string
+  //var parsedJSON string
 
-  json.Unmarshal([]byte(testJSON), &parsedJSON)
+  //json.Unmarshal([]byte(testJSON), &parsedJSON)
 
-  return parsedJSON
+  //return parsedJSON
 
-}
+//}
 
-func GetPokemonFromFile(path string) string {
+//func GetPokemonFromFile(path string) []map[string]interface{} {
+func GetPokemonFromFile(path string) []pokemon.Pkmn {
   //jsonFile, err := os.Open("./pokemondata/stats.json")
   jsonFile, err := os.Open(path)
 
   if err != nil {
     fmt.Println(err)
-    return ""
+    return nil
   } else {
     fmt.Println("Successfully opened stats.json")
   }
@@ -39,20 +39,21 @@ func GetPokemonFromFile(path string) string {
 
   byteValue, _ := ioutil.ReadAll(jsonFile)
 
-  var pokemonFromFile pokemon.PokemonArray
+  //var pokemonFromFile pokemon.PokemonArray
 
-  fmt.Println("byteValue is: " + string(byteValue))
+  //fmt.Println("byteValue is: " + string(byteValue))
 
   // Declared an empty interface of type Array
-  var results []map[string]interface{}
+  //var results []map[string]interface{}
+  var results []pokemon.Pkmn
 
   // Unmarshal or Decode the JSON to the interface.
   json.Unmarshal(byteValue, &results)
 
-  for key, result := range results {
-    fmt.Println("Reading Value for Key :", key)
-    fmt.Println("\tnumber :", result["number"], "/ Name :", result["name"])
-  }
+  //for key, result := range results {
+    //fmt.Println("Reading Value for Key :", key)
+    //fmt.Println("\tnumber :", result["number"], "/ Name :", result["name"])
+  //}
 
   //json.Unmarshal(byteValue, &pokemonFromFile)
 
@@ -77,5 +78,6 @@ func GetPokemonFromFile(path string) string {
   //fmt.Println("Pokemon Number: " + strconv.Itoa(pokemonFromFile.PokemonArray[i].Number))
   //}
 
-  return ""
+  //return ""
+  return results
 }
