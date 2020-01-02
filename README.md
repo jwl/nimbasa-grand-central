@@ -5,5 +5,5 @@ Golang implementation of a Pokemon battle engine. Built off of template project 
 * From project root, run: `docker build -t nimbasa .`
 
 ### Usage
-* run the following command: `docker-compose up`
+* run the following command: `docker-compose up nimbasa`
 * server should now be listening on port 5000 on `localhost`
