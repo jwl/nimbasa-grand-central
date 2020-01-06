@@ -1,18 +1,5 @@
 package pokemon
 
-//type Pokemon struct {
-//name    string
-//number  int
-//hp      int
-//attack  int
-//defense int
-//spAtk   int
-//spDef   int
-//speed   int
-//type1   string
-//type2   string
-//}
-
 type Pkmn struct {
 	Number  int    `json:"number"`
 	Name    string `json:"name"`
@@ -29,7 +16,3 @@ type Pkmn struct {
 type Array struct {
 	PokemonArray []Pkmn `json:"pokemon"`
 }
-
-//func populatePokemon() []Pokemon {
-//GetObjectFromJSON("../pokemondata/stats.json")
-//}

@@ -12,14 +12,14 @@ import (
 )
 
 func getAllPokemon(w http.ResponseWriter, r *http.Request) {
-	pokemonData := internal.GetPokemonFromFile("./pokemondata/stats.json")
+	pokemonData := internal.GetPokemonFromFile()
 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(pokemonData)
 }
 
 func getPokemon(w http.ResponseWriter, r *http.Request) {
-	pokemonData := internal.GetPokemonFromFile("./pokemondata/stats.json")
+	pokemonData := internal.GetPokemonFromFile()
 	w.Header().Set("Content-Type", "application/json")
 
 	targetNumber, err := strconv.Atoi(mux.Vars(r)["id"])
@@ -30,6 +30,8 @@ func getPokemon(w http.ResponseWriter, r *http.Request) {
 	for _, singlePokemon := range pokemonData {
 		if singlePokemon.Number == targetNumber {
 			json.NewEncoder(w).Encode(singlePokemon)
+			fmt.Printf("old method: %#v", singlePokemon)
+			fmt.Printf("new method: %#v", internal.GetSinglePokemon(targetNumber))
 		}
 	}
 
