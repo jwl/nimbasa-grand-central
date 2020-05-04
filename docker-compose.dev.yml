@@ -1,0 +1,25 @@
+version: "3"
+services:
+  tests:
+    build: ./
+
+  api:
+    build: ./
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./:/app
+    depends_on:
+      - nimbasa-db
+    environment:
+      APP_ENV: development
+    # image: 
+
+  nimbasa-db:
+    images: postgres:latest
+    container_name: full_db_postgres
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+      - DATABASE_HOST=${DB_HOST}
